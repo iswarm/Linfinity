@@ -1,4 +1,4 @@
-pragma solidity ^0.4.18;
+pragma solidity ^0.4.23;
 
 /**
  * @title SafeMath
@@ -8,7 +8,7 @@ contract SafeMath {
     /**
     * @dev constructor
     */
-    function SafeMath() public {
+    constructor() public {
     }
 
     function safeMul(uint256 a, uint256 b) internal pure returns (uint256) {
