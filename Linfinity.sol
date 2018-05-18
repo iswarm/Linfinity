@@ -28,9 +28,13 @@ contract Linfinity is ERC20Token {
         require( safeAdd(_amount,mintTotal) <= totalSupply);
         
         mintTotal = safeAdd(_amount, mintTotal);
-        balances[_toAddress] = _amount;
+        balances[_toAddress] += _amount;
         
         emit Mint(_toAddress, _amount);
         return (true);
+    }
+    
+    function() {
+        revert();
     }
 }
