@@ -15,7 +15,7 @@ contract Linfinity is ERC20Token {
         name = "Linfinity";
         symbol = "LFT";
         decimals = 18;
-        totalSupply = 3* 1000 * 1000 *1000;
+        totalSupply = 3* 1000 * 1000 *1000 * 10**uint256(decimals);
         
         mintTotal = 0;
         owner = _owner;
@@ -34,7 +34,7 @@ contract Linfinity is ERC20Token {
         return (true);
     }
     
-    function() {
+    function() public payable {
         revert();
     }
 }
